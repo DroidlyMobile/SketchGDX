@@ -237,7 +237,8 @@ public class rs extends qA implements View.OnClickListener, MoreblockImporterDia
                //Add default activity methods here
                 EventBean eventBean2 = new EventBean(
                         EventBean.EVENT_TYPE_ACTIVITY, -1,
-                        "Show", "show");
+                        "Show",
+                        "show");
                 eventBean2.initValue();
                 activityEvents.add(eventBean2);
                 EventBean eventBean3 = new EventBean(

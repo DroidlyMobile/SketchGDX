@@ -23,7 +23,8 @@ public class AddDefaultComponents {
     private Context context;
     public AddDefaultComponents(Context context){
         this.context = context;
-        componentpath = FileUtil.getExternalStorageDir().concat("/.sketchwaregames/data/system/");
+        componentpath = FileUtil.getExternalStorageDir()
+                .concat("/.sketchwaregames/data/system/");
         if (!FileUtil.isExistFile(componentpath + "component.json")) {
             FileUtil.makeDir(componentpath);
             copyDefaultComponents();

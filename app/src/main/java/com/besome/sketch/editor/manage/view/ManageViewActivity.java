@@ -381,7 +381,9 @@ public class ManageViewActivity extends BaseAppCompatActivity implements OnClick
         ArrayList<ProjectFileBean> projectFiles = jC.b(sc_id).b();
         if (projectFiles != null) {
             for (int i = 0; i < projectFiles.size(); i++) {
-                checknames.add(projectFiles.get(i).fileName.replace("_fragment","").replace("_dialog","").toLowerCase());
+                checknames.add(projectFiles.get(i).fileName.replace("_fragment",
+                        "").replace("_dialog","")
+                        .toLowerCase());
             }
 
         }
@@ -487,7 +489,6 @@ public class ManageViewActivity extends BaseAppCompatActivity implements OnClick
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
             Fragment var3 = (Fragment) super.instantiateItem(container, position);
             activitiesFragment = (Fw) var3;
-            System.out.println("GET POOP" + checknames);
             return var3;
         }
 
@@ -557,7 +558,6 @@ public class ManageViewActivity extends BaseAppCompatActivity implements OnClick
                         if (_position == 4){
                             viewtype = 69;
                             typeselected = 4;
-
                         }
                         notifyDataSetChanged();
                     }

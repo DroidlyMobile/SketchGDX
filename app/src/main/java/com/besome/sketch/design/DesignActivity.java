@@ -568,7 +568,6 @@ public class DesignActivity extends BaseAppCompatActivity implements OnClickList
                 getGameview = "poop";
                 launchActivity(ManageViewActivity.class,69);
             }
-
         }
 
     }
@@ -952,7 +951,9 @@ public class DesignActivity extends BaseAppCompatActivity implements OnClickList
     }
 
     @SafeVarargs
-    public final void launchActivity(Class<? extends Activity> toLaunch, Integer optionalRequestCode, Pair<String, String>... extras) {
+    public final void launchActivity(Class<? extends Activity> toLaunch,
+                                     Integer optionalRequestCode,
+                                     Pair<String, String>... extras) {
         Intent intent = new Intent(getApplicationContext(), toLaunch);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra("sc_id", sc_id);
